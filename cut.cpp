@@ -338,7 +338,7 @@ int main(int argc, char** argv)
     {
         if (waitKey(1) == 'p') break;
     }
-    imwrite("seed.jpg", display);
+    imwrite("seed.png", display);
     cout << "------------------------------" << endl;
     cout << "Converting image to graph ..." << endl;
     img2adj();
@@ -350,7 +350,7 @@ int main(int argc, char** argv)
     cout << "Finding minimum cut ..." << endl;
     displayCut();
     imshow("Image", display);
-    imwrite("cut.jpg", display);
+    imwrite("cut.png", display);
     cout << "Minimum cut displayed. " << endl;
     cout << "------------------------------" << endl;
     cout << "Cutting image ..." << endl;
@@ -359,8 +359,8 @@ int main(int argc, char** argv)
     cutImage();
     imshow("Foreground", fgm);
     imshow("Background", bgm);
-    imwrite("fg.jpg", fgm);
-    imwrite("bg.jpg", bgm);
+    imwrite("fg.png", fgm);
+    imwrite("bg.png", bgm);
     cout << "Done." << endl;
     cout << "Press any key to exit." << endl;
     waitKey(0);
